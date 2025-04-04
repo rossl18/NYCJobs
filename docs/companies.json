@@ -589,7 +589,7 @@
 {"name": "The Juilliard School", "careerUrl": "https://www.juilliard.edu/about/employment", "industry": "Education"},
 {"name": "Pratt Institute", "careerUrl": "https://www.pratt.edu/about/pratt-at-a-glance/employment/", "industry": "Education"},
 {"name": "Parsons School of Design", "careerUrl": "https://www.newschool.edu/human-resources/careers/", "industry": "Education"},
-{"name": "Bank Street College", "careerUrl": "https://www.bankstreet.edu/about/careers-at-bank-street/", "industry": "Education"}
+{"name": "Bank Street College", "careerUrl": "https://www.bankstreet.edu/about/careers-at-bank-street/", "industry": "Education"},
     {"name": "Databricks NYC", "careerUrl": "https://www.databricks.com/company/careers", "industry": "Technology"},
     {"name": "Snyk NYC", "careerUrl": "https://snyk.io/careers/", "industry": "Technology"},
     {"name": "Hopin NYC", "careerUrl": "https://hopin.com/careers", "industry": "Technology"},
