@@ -1,3 +1,29 @@
+function removeDuplicates(companies) {
+  const unique = [];
+  const seen = new Set();
+  
+  companies.forEach(company => {
+    const key = company.name.toLowerCase() + company.careerUrl.toLowerCase();
+    if (!seen.has(key)) {
+      seen.add(key);
+      unique.push(company);
+    }
+  });
+  
+  return unique;
+}
+
+function showError(title, details = '') {
+  const errorHtml = `
+    <div style="color: red; padding: 20px; border: 1px solid red; margin: 20px;">
+      <h3>${title}</h3>
+      <p>${details}</p>
+      <p>Click F12 → Console for technical details</p>
+    </div>
+  `;
+  document.body.insertAdjacentHTML('afterbegin', errorHtml);
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
   const listElement = document.getElementById('company-list');
   const searchInput = document.getElementById('search-input');
@@ -9,7 +35,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   try {
-    // Try multiple possible JSON paths
     const jsonPaths = [
       'companies.json',
       '../companies.json',
@@ -29,7 +54,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           continue;
         }
         data = await response.json();
-        console.log('Success! Data loaded from:', path, data);
+        console.log('Success! Data loaded from:', path);
         break;
       } catch (err) {
         lastError = err.message;
@@ -40,45 +65,75 @@ document.addEventListener('DOMContentLoaded', async () => {
       throw new Error(`All paths failed. Last error: ${lastError}`);
     }
 
-    // Extract all unique industries
-    const industries = [...new Set(data.companies.map(company => company.industry))];
+    // Remove duplicates
+    data.companies = removeDuplicates(data.companies);
+
+    // Get all unique industries
+    const industries = [...new Set(data.companies.map(c => c.industry).filter(Boolean))].sort();
     
-    // Create industry filter checkboxes
-    filtersContainer.innerHTML = industries.map(industry => `
+    // Render industry filters
+    filtersContainer.innerHTML = `
       <div class="filter-option">
-        <input type="checkbox" id="filter-${industry.replace(/\s+/g, '-').toLowerCase()}" 
-               class="filter-checkbox" value="${industry}" checked>
-        <label for="filter-${industry.replace(/\s+/g, '-').toLowerCase()}" 
-               class="filter-label">${industry}</label>
+        <input type="checkbox" id="filter-all" class="filter-checkbox" checked>
+        <label for="filter-all" class="filter-label">All Industries</label>
       </div>
-    `).join('');
+      ${industries.map(industry => `
+        <div class="filter-option">
+          <input type="checkbox" id="filter-${industry.toLowerCase().replace(/\s+/g, '-')}" 
+                 class="filter-checkbox industry-filter" value="${industry}" checked>
+          <label for="filter-${industry.toLowerCase().replace(/\s+/g, '-')}" 
+                 class="filter-label">${industry}</label>
+        </div>
+      `).join('')}
+    `;
 
-    // Store original data
-    let filteredCompanies = [...data.companies];
+    // Handle "All" checkbox
+    document.getElementById('filter-all').addEventListener('change', function() {
+      const checkboxes = document.querySelectorAll('.industry-filter');
+      checkboxes.forEach(cb => {
+        cb.checked = !this.checked;
+      });
+      renderCompanies();
+    });
 
-    // Render companies based on current filters and search
+    // Handle individual industry checkboxes
+    document.querySelectorAll('.industry-filter').forEach(cb => {
+      cb.addEventListener('change', function() {
+        if (!this.checked) {
+          document.getElementById('filter-all').checked = false;
+        }
+        renderCompanies();
+      });
+    });
+
+    // Render companies based on filters
     const renderCompanies = () => {
       const searchTerm = searchInput.value.toLowerCase();
-      const selectedIndustries = Array.from(
-        document.querySelectorAll('.filter-checkbox:checked')
-      ).map(checkbox => checkbox.value);
+      const allCheckbox = document.getElementById('filter-all');
+      const industryCheckboxes = Array.from(document.querySelectorAll('.industry-filter:checked'));
+      
+      const selectedIndustries = allCheckbox.checked 
+        ? [] // empty array means "all industries"
+        : industryCheckboxes.map(cb => cb.value);
 
-      filteredCompanies = data.companies.filter(company => {
+      const filtered = data.companies.filter(company => {
+        // Search term matching
         const matchesSearch = company.name.toLowerCase().includes(searchTerm) || 
                             (company.industry && company.industry.toLowerCase().includes(searchTerm));
+        
+        // Industry matching
         const matchesIndustry = selectedIndustries.length === 0 || 
                               (company.industry && selectedIndustries.includes(company.industry));
+        
         return matchesSearch && matchesIndustry;
       });
 
-      if (filteredCompanies.length === 0) {
-        listElement.innerHTML = '<div class="no-results">No companies match your filters</div>';
+      if (filtered.length === 0) {
+        listElement.innerHTML = '<div class="no-results">No companies match your search and filters</div>';
       } else {
-        listElement.innerHTML = filteredCompanies.map(company => `
-          <a href="${company.careerUrl}" 
-             class="company-link" 
-             target="_blank">
-            ${company.name} <span class="industry-tag">(${company.industry})</span>
+        listElement.innerHTML = filtered.map(company => `
+          <a href="${company.careerUrl}" class="company-link" target="_blank">
+            ${company.name} ${company.industry ? `<span class="industry-tag">(${company.industry})</span>` : ''}
           </a>
         `).join('');
       }
@@ -87,11 +142,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Initial render
     renderCompanies();
 
-    // Add event listeners for filtering
+    // Search input listener
     searchInput.addEventListener('input', renderCompanies);
-    document.querySelectorAll('.filter-checkbox').forEach(checkbox => {
-      checkbox.addEventListener('change', renderCompanies);
-    });
 
   } catch (error) {
     showError(`Failed to load companies: ${error.message}`, 
@@ -103,14 +155,3 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   }
 });
-
-function showError(title, details = '') {
-  const errorHtml = `
-    <div style="color: red; padding: 20px; border: 1px solid red; margin: 20px;">
-      <h3>${title}</h3>
-      <p>${details}</p>
-      <p>Click F12 → Console for technical details</p>
-    </div>
-  `;
-  document.body.insertAdjacentHTML('afterbegin', errorHtml);
-}
