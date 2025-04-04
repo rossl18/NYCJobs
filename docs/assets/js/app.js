@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  fetch('NYCJobs/docs/companies.json')
+  fetch('/NYCJobs/docs/companies.json')
     .then(response => response.json())
     .then(data => {
       const list = document.getElementById('company-list');
