@@ -1,0 +1,784 @@
+{
+  "companies": [
+    {
+      "name": "Google NYC",
+      "careerUrl": "https://careers.google.com/locations/new-york"
+    },
+    {
+      "name": "Meta (Facebook NYC)",
+      "careerUrl": "https://www.metacareers.com"
+    },
+    {
+      "name": "Amazon NYC",
+      "careerUrl": "https://www.amazon.jobs/en/locations/new-york-ny"
+    },
+    {
+      "name": "Microsoft NYC",
+      "careerUrl": "https://careers.microsoft.com/us/en/l/new-york-ny"
+    },
+    {
+      "name": "Apple NYC",
+      "careerUrl": "https://www.apple.com/careers/us/"
+    },
+    {
+      "name": "Spotify",
+      "careerUrl": "https://www.lifeatspotify.com"
+    },
+    {
+      "name": "Twitter (X Corp)",
+      "careerUrl": "https://careers.twitter.com"
+    },
+    {
+      "name": "LinkedIn NYC",
+      "careerUrl": "https://careers.linkedin.com"
+    },
+    {
+      "name": "Salesforce NYC",
+      "careerUrl": "https://www.salesforce.com/company/careers/"
+    },
+    {
+      "name": "Uber NYC",
+      "careerUrl": "https://www.uber.com/us/en/careers/"
+    },
+    {
+      "name": "Lyft NYC",
+      "careerUrl": "https://www.lyft.com/careers"
+    },
+    {
+      "name": "Airbnb NYC",
+      "careerUrl": "https://careers.airbnb.com"
+    },
+    {
+      "name": "Slack NYC",
+      "careerUrl": "https://slack.com/careers"
+    },
+    {
+      "name": "Etsy",
+      "careerUrl": "https://www.etsy.com/careers"
+    },
+    {
+      "name": "Shutterstock",
+      "careerUrl": "https://www.shutterstock.com/careers"
+    },
+    {
+      "name": "MongoDB",
+      "careerUrl": "https://www.mongodb.com/careers"
+    },
+    {
+      "name": "Datadog",
+      "careerUrl": "https://www.datadoghq.com/careers/"
+    },
+    {
+      "name": "BuzzFeed",
+      "careerUrl": "https://www.buzzfeed.com/about/jobs"
+    },
+    {
+      "name": "Vice Media",
+      "careerUrl": "https://www.vice.com/en_us/page/careers"
+    },
+    {
+      "name": "The New York Times",
+      "careerUrl": "https://nytco.com/careers/"
+    },
+    {
+      "name": "Bloomberg LP",
+      "careerUrl": "https://www.bloomberg.com/company/careers/"
+    },
+    {
+      "name": "Goldman Sachs",
+      "careerUrl": "https://www.goldmansachs.com/careers/"
+    },
+    {
+      "name": "JPMorgan Chase",
+      "careerUrl": "https://careers.jpmorgan.com"
+    },
+    {
+      "name": "Morgan Stanley",
+      "careerUrl": "https://www.morganstanley.com/people-opportunities/"
+    },
+    {
+      "name": "American Express",
+      "careerUrl": "https://www.americanexpress.com/en-us/careers/"
+    },
+    {
+      "name": "BlackRock",
+      "careerUrl": "https://careers.blackrock.com"
+    },
+    {
+      "name": "Citigroup",
+      "careerUrl": "https://jobs.citi.com"
+    },
+    {
+      "name": "Barclays NYC",
+      "careerUrl": "https://home.barclays/careers/"
+    },
+    {
+      "name": "Deutsche Bank NYC",
+      "careerUrl": "https://careers.db.com"
+    },
+    {
+      "name": "Credit Suisse NYC",
+      "careerUrl": "https://www.credit-suisse.com/careers/en.html"
+    },
+    {
+      "name": "Nomura NYC",
+      "careerUrl": "https://www.nomura.com/careers/"
+    },
+    {
+      "name": "Bank of America NYC",
+      "careerUrl": "https://careers.bankofamerica.com"
+    },
+    {
+      "name": "Wells Fargo NYC",
+      "careerUrl": "https://www.wellsfargo.com/about/careers/"
+    },
+    {
+      "name": "Mastercard NYC",
+      "careerUrl": "https://www.mastercard.us/en-us/vision/who-we-are/careers.html"
+    },
+    {
+      "name": "Visa NYC",
+      "careerUrl": "https://www.visa.com/careers"
+    },
+    {
+      "name": "American International Group (AIG)",
+      "careerUrl": "https://www.aig.com/careers"
+    },
+    {
+      "name": "MetLife",
+      "careerUrl": "https://www.metlife.com/about/careers/"
+    },
+    {
+      "name": "New York Life",
+      "careerUrl": "https://www.newyorklife.com/careers"
+    },
+    {
+      "name": "Warner Bros. Discovery",
+      "careerUrl": "https://wbd.com/careers/"
+    },
+    {
+      "name": "NBCUniversal",
+      "careerUrl": "https://www.nbcunicareers.com"
+    },
+    {
+      "name": "ViacomCBS",
+      "careerUrl": "https://www.viacomcbs.com/careers"
+    },
+    {
+      "name": "Condé Nast",
+      "careerUrl": "https://condenast.com/careers"
+    },
+    {
+      "name": "Hearst Communications",
+      "careerUrl": "https://www.hearst.com/careers"
+    },
+    {
+      "name": "Penguin Random House",
+      "careerUrl": "https://www.penguinrandomhouse.com/careers/"
+    },
+    {
+      "name": "Simon & Schuster",
+      "careerUrl": "https://www.simonandschuster.com/careers"
+    },
+    {
+      "name": "Spotify",
+      "careerUrl": "https://www.lifeatspotify.com"
+    },
+    {
+      "name": "Sony Music Entertainment",
+      "careerUrl": "https://www.sonymusic.com/careers/"
+    },
+    {
+      "name": "Warner Music Group",
+      "careerUrl": "https://www.wmg.com/careers"
+    },
+    {
+      "name": "Universal Music Group",
+      "careerUrl": "https://www.universalmusic.com/careers/"
+    },
+    {
+      "name": "Pinterest NYC",
+      "careerUrl": "https://www.pinterestcareers.com"
+    },
+    {
+      "name": "Snap NYC",
+      "careerUrl": "https://www.snap.com/en-US/jobs/"
+    },
+    {
+      "name": "TikTok NYC",
+      "careerUrl": "https://careers.tiktok.com"
+    },
+    {
+      "name": "WeWork",
+      "careerUrl": "https://careers.wework.com"
+    },
+    {
+      "name": "Peloton",
+      "careerUrl": "https://www.onepeloton.com/careers"
+    },
+    {
+      "name": "Casper",
+      "careerUrl": "https://casper.com/careers"
+    },
+    {
+      "name": "Warby Parker",
+      "careerUrl": "https://www.warbyparker.com/jobs"
+    },
+    {
+      "name": "Glossier",
+      "careerUrl": "https://www.glossier.com/careers"
+    },
+    {
+      "name": "Rent the Runway",
+      "careerUrl": "https://www.renttherunway.com/careers"
+    },
+    {
+      "name": "Harry's",
+      "careerUrl": "https://www.harrys.com/en/us/careers"
+    },
+    {
+      "name": "Blue Apron",
+      "careerUrl": "https://www.blueapron.com/careers"
+    },
+    {
+      "name": "Zocdoc",
+      "careerUrl": "https://www.zocdoc.com/about/careers/"
+    },
+    {
+      "name": "Flatiron Health",
+      "careerUrl": "https://flatiron.com/careers/"
+    },
+    {
+      "name": "Oscar Health",
+      "careerUrl": "https://www.hioscar.com/careers"
+    },
+    {
+      "name": "Ro (Roman)",
+      "careerUrl": "https://ro.co/careers"
+    },
+    {
+      "name": "23andMe NYC",
+      "careerUrl": "https://www.23andme.com/careers/"
+    },
+    {
+      "name": "Memorial Sloan Kettering",
+      "careerUrl": "https://careers.mskcc.org"
+    },
+    {
+      "name": "Mount Sinai Health System",
+      "careerUrl": "https://careers.mountsinai.org"
+    },
+    {
+      "name": "NYU Langone Health",
+      "careerUrl": "https://nyulangone.org/careers"
+    },
+    {
+      "name": "NewYork-Presbyterian",
+      "careerUrl": "https://jobs.nyp.org"
+    },
+    {
+      "name": "Northwell Health",
+      "careerUrl": "https://jobs.northwell.edu"
+    },
+    {
+      "name": "JetBlue Airways",
+      "careerUrl": "https://careers.jetblue.com"
+    },
+    {
+      "name": "Delta Air Lines NYC",
+      "careerUrl": "https://www.delta.com/us/en/careers/overview"
+    },
+    {
+      "name": "American Airlines NYC",
+      "careerUrl": "https://jobs.aa.com"
+    },
+    {
+      "name": "United Airlines NYC",
+      "careerUrl": "https://careers.united.com"
+    },
+    {
+      "name": "Verizon NYC",
+      "careerUrl": "https://www.verizon.com/about/work"
+    },
+    {
+      "name": "AT&T NYC",
+      "careerUrl": "https://www.att.jobs"
+    },
+    {
+      "name": "T-Mobile NYC",
+      "careerUrl": "https://www.t-mobile.com/careers"
+    },
+    {
+      "name": "Con Edison",
+      "careerUrl": "https://www.coned.com/en/careers"
+    },
+    {
+      "name": "National Grid NYC",
+      "careerUrl": "https://www.nationalgridus.com/Our-Company/Careers"
+    },
+    {
+      "name": "PepsiCo NYC",
+      "careerUrl": "https://www.pepsicojobs.com"
+    },
+    {
+      "name": "Estée Lauder Companies",
+      "careerUrl": "https://careers.elcompanies.com"
+    },
+    {
+      "name": "L'Oréal USA",
+      "careerUrl": "https://www.loreal.com/en/usa/careers/"
+    },
+    {
+      "name": "Revlon",
+      "careerUrl": "https://www.revlon.com/careers"
+    },
+    {
+      "name": "Colgate-Palmolive",
+      "careerUrl": "https://www.colgatepalmolive.com/en-us/careers"
+    },
+    {
+      "name": "Pfizer NYC",
+      "careerUrl": "https://www.pfizer.com/careers"
+    },
+    {
+      "name": "Bristol Myers Squibb NYC",
+      "careerUrl": "https://www.bms.com/careers.html"
+    },
+    {
+      "name": "Merck NYC",
+      "careerUrl": "https://www.merck.com/careers/"
+    },
+    {
+      "name": "Johnson & Johnson NYC",
+      "careerUrl": "https://www.careers.jnj.com"
+    },
+    {
+      "name": "Novartis NYC",
+      "careerUrl": "https://www.novartis.com/careers"
+    },
+    {
+      "name": "Sanofi NYC",
+      "careerUrl": "https://www.sanofi.com/en/careers"
+    },
+    {
+      "name": "Regeneron",
+      "careerUrl": "https://www.regeneron.com/careers"
+    },
+    {
+      "name": "S&P Global",
+      "careerUrl": "https://careers.spglobal.com"
+    },
+    {
+      "name": "Moody's",
+      "careerUrl": "https://careers.moodys.com"
+    },
+    {
+      "name": "Fitch Ratings",
+      "careerUrl": "https://www.fitchratings.com/site/careers"
+    },
+    {
+      "name": "Deloitte NYC",
+      "careerUrl": "https://www2.deloitte.com/us/en/careers.html"
+    },
+    {
+      "name": "PwC NYC",
+      "careerUrl": "https://www.pwc.com/us/en/careers.html"
+    },
+    {
+      "name": "EY NYC",
+      "careerUrl": "https://careers.ey.com"
+    },
+    {
+      "name": "KPMG NYC",
+      "careerUrl": "https://www.kpmguscareers.com"
+    },
+    {
+      "name": "McKinsey & Company NYC",
+      "careerUrl": "https://www.mckinsey.com/careers"
+    },
+    {
+      "name": "Boston Consulting Group NYC",
+      "careerUrl": "https://careers.bcg.com"
+    },
+    {
+      "name": "Bain & Company NYC",
+      "careerUrl": "https://www.bain.com/careers/"
+    },
+    {
+      "name": "Accenture NYC",
+      "careerUrl": "https://www.accenture.com/us-en/careers"
+    },
+    {
+      "name": "IBM NYC",
+      "careerUrl": "https://www.ibm.com/employment/"
+    },
+    {
+      "name": "Cognizant NYC",
+      "careerUrl": "https://careers.cognizant.com"
+    },
+    {
+      "name": "Infosys NYC",
+      "careerUrl": "https://www.infosys.com/careers/"
+    },
+    {
+      "name": "Wipro NYC",
+      "careerUrl": "https://careers.wipro.com"
+    },
+    {
+      "name": "Tata Consultancy Services NYC",
+      "careerUrl": "https://www.tcs.com/careers"
+    },
+    {
+      "name": "Capgemini NYC",
+      "careerUrl": "https://www.capgemini.com/us-en/careers/"
+    },
+    {
+      "name": "Squarespace",
+      "careerUrl": "https://www.squarespace.com/careers"
+    },
+    {
+      "name": "Kickstarter",
+      "careerUrl": "https://www.kickstarter.com/jobs"
+    },
+    {
+      "name": "Tumblr",
+      "careerUrl": "https://www.tumblr.com/jobs"
+    },
+    {
+      "name": "Foursquare",
+      "careerUrl": "https://foursquare.com/jobs"
+    },
+    {
+      "name": "Meetup",
+      "careerUrl": "https://www.meetup.com/careers/"
+    },
+    {
+      "name": "Shutterstock",
+      "careerUrl": "https://www.shutterstock.com/careers"
+    },
+    {
+      "name": "The Knot Worldwide",
+      "careerUrl": "https://www.theknotww.com/careers"
+    },
+    {
+      "name": "Vimeo",
+      "careerUrl": "https://vimeo.com/jobs"
+    },
+    {
+      "name": "Seamless/Grubhub",
+      "careerUrl": "https://careers.grubhub.com"
+    },
+    {
+      "name": "DoorDash NYC",
+      "careerUrl": "https://www.doordash.com/careers/"
+    },
+    {
+      "name": "Uber Eats NYC",
+      "careerUrl": "https://www.uber.com/us/en/careers/"
+    },
+    {
+      "name": "Postmates NYC",
+      "careerUrl": "https://careers.postmates.com"
+    },
+    {
+      "name": "Bluecore",
+      "careerUrl": "https://www.bluecore.com/careers/"
+    },
+    {
+      "name": "Better.com",
+      "careerUrl": "https://better.com/about-us/careers"
+    },
+    {
+      "name": "Opendoor NYC",
+      "careerUrl": "https://www.opendoor.com/jobs"
+    },
+    {
+      "name": "Compass",
+      "careerUrl": "https://www.compass.com/careers/"
+    },
+    {
+      "name": "WeWork",
+      "careerUrl": "https://careers.wework.com"
+    },
+    {
+      "name": "The RealReal NYC",
+      "careerUrl": "https://www.therealreal.com/careers"
+    },
+    {
+      "name": "ThredUp NYC",
+      "careerUrl": "https://www.thredup.com/careers"
+    },
+    {
+      "name": "Poshmark NYC",
+      "careerUrl": "https://www.poshmark.com/careers"
+    },
+    {
+      "name": "StockX NYC",
+      "careerUrl": "https://stockx.com/jobs"
+    },
+    {
+      "name": "FanDuel NYC",
+      "careerUrl": "https://www.fanduel.com/careers"
+    },
+    {
+      "name": "DraftKings NYC",
+      "careerUrl": "https://careers.draftkings.com"
+    },
+    {
+      "name": "Peloton",
+      "careerUrl": "https://www.onepeloton.com/careers"
+    },
+    {
+      "name": "Mirror",
+      "careerUrl": "https://www.mirror.co/careers"
+    },
+    {
+      "name": "Hinge",
+      "careerUrl": "https://hinge.co/careers/"
+    },
+    {
+      "name": "OkCupid",
+      "careerUrl": "https://www.okcupid.com/careers"
+    },
+    {
+      "name": "The Meet Group",
+      "careerUrl": "https://www.themeetgroup.com/careers/"
+    },
+    {
+      "name": "Bumble NYC",
+      "careerUrl": "https://bumble.com/careers"
+    },
+    {
+      "name": "Tinder NYC",
+      "careerUrl": "https://www.lifeattinder.com"
+    },
+    {
+      "name": "Match Group NYC",
+      "careerUrl": "https://mtch.com/careers"
+    },
+    {
+      "name": "Zola",
+      "careerUrl": "https://www.zola.com/careers"
+    },
+    {
+      "name": "The Knot",
+      "careerUrl": "https://www.theknotww.com/careers"
+    },
+    {
+      "name": "Eventbrite NYC",
+      "careerUrl": "https://www.eventbrite.com/careers/"
+    },
+    {
+      "name": "Ticketmaster NYC",
+      "careerUrl": "https://jobs.ticketmaster.com"
+    },
+    {
+      "name": "Live Nation NYC",
+      "careerUrl": "https://www.livenationentertainment.com/careers/"
+    },
+    {
+      "name": "MSG Entertainment",
+      "careerUrl": "https://www.msgentertainment.com/careers"
+    },
+    {
+      "name": "A+E Networks",
+      "careerUrl": "https://www.aenetworks.com/careers"
+    },
+    {
+      "name": "AMC Networks",
+      "careerUrl": "https://www.amcnetworks.com/careers/"
+    },
+    {
+      "name": "Discovery NYC",
+      "careerUrl": "https://jobs.discovery.com"
+    },
+    {
+      "name": "HBO",
+      "careerUrl": "https://warnermediacareers.com/hbo-max-jobs"
+    },
+    {
+      "name": "Showtime",
+      "careerUrl": "https://www.sho.com/careers"
+    },
+    {
+      "name": "Paramount NYC",
+      "careerUrl": "https://www.paramount.com/careers"
+    },
+    {
+      "name": "Sesame Workshop",
+      "careerUrl": "https://www.sesameworkshop.org/about-us/jobs"
+    },
+    {
+      "name": "Scholastic",
+      "careerUrl": "https://www.scholastic.com/aboutscholastic/jobs.htm"
+    },
+    {
+      "name": "HarperCollins",
+      "careerUrl": "https://careers-harpercollins.icims.com"
+    },
+    {
+      "name": "Macmillan Publishers",
+      "careerUrl": "https://macmillan.com/careers/"
+    },
+    {
+      "name": "Hachette Book Group",
+      "careerUrl": "https://www.hachettebookgroup.com/about/careers/"
+    },
+    {
+      "name": "Penguin Random House",
+      "careerUrl": "https://www.penguinrandomhouse.com/careers/"
+    },
+    {
+      "name": "Simon & Schuster",
+      "careerUrl": "https://www.simonandschuster.com/careers"
+    },
+    {
+      "name": "Workman Publishing",
+      "careerUrl": "https://www.workman.com/careers"
+    },
+    {
+      "name": "Abrams Books",
+      "careerUrl": "https://www.abramsbooks.com/careers/"
+    },
+    {
+      "name": "W.W. Norton & Company",
+      "careerUrl": "https://wwnorton.com/careers/"
+    },
+    {
+      "name": "Oxford University Press NYC",
+      "careerUrl": "https://global.oup.com/about/careers/"
+    },
+    {
+      "name": "Cambridge University Press NYC",
+      "careerUrl": "https://www.cambridge.org/us/about-us/careers/"
+    },
+    {
+      "name": "The Wall Street Journal",
+      "careerUrl": "https://www.wsj.com/careers"
+    },
+    {
+      "name": "New York Post",
+      "careerUrl": "https://nypost.com/careers/"
+    },
+    {
+      "name": "Daily News",
+      "careerUrl": "https://www.nydailynews.com/careers/"
+    },
+    {
+      "name": "Vox Media NYC",
+      "careerUrl": "https://www.voxmedia.com/careers"
+    },
+    {
+      "name": "Vice Media",
+      "careerUrl": "https://www.vice.com/en_us/page/careers"
+    },
+    {
+      "name": "Refinery29",
+      "careerUrl": "https://www.refinery29.com/en-us/careers"
+    },
+    {
+      "name": "Complex Networks",
+      "careerUrl": "https://www.complex.com/careers"
+    },
+    {
+      "name": "G/O Media",
+      "careerUrl": "https://g-omedia.com/careers/"
+    },
+    {
+      "name": "Bustle Digital Group",
+      "careerUrl": "https://www.bdg.com/careers"
+    },
+    {
+      "name": "Group Nine Media",
+      "careerUrl": "https://www.groupninemedia.com/careers"
+    },
+    {
+      "name": "Hearst Magazines",
+      "careerUrl": "https://www.hearst.com/careers"
+    },
+    {
+      "name": "Condé Nast",
+      "careerUrl": "https://condenast.com/careers"
+    },
+    {
+      "name": "Time Inc.",
+      "careerUrl": "https://www.timeinc.com/careers/"
+    },
+    {
+      "name": "Forbes",
+      "careerUrl": "https://www.forbes.com/careers/"
+    },
+    {
+      "name": "Business Insider",
+      "careerUrl": "https://www.insider-inc.com/careers"
+    },
+    {
+      "name": "Fast Company",
+      "careerUrl": "https://www.fastcompany.com/careers"
+    },
+    {
+      "name": "Fortune",
+      "careerUrl": "https://fortune.com/careers/"
+    },
+    {
+      "name": "Money",
+      "careerUrl": "https://money.com/careers/"
+    },
+    {
+      "name": "Sports Illustrated",
+      "careerUrl": "https://www.si.com/careers"
+    },
+    {
+      "name": "People",
+      "careerUrl": "https://people.com/careers/"
+    },
+    {
+      "name": "InStyle",
+      "careerUrl": "https://www.instyle.com/careers"
+    },
+    {
+      "name": "Vogue",
+      "careerUrl": "https://www.condenast.com/careers"
+    },
+    {
+      "name": "Vanity Fair",
+      "careerUrl": "https://www.condenast.com/careers"
+    },
+    {
+      "name": "The New Yorker",
+      "careerUrl": "https://www.condenast.com/careers"
+    },
+    {
+      "name": "Wired",
+      "careerUrl": "https://www.condenast.com/careers"
+    },
+    {
+      "name": "GQ",
+      "careerUrl": "https://www.condenast.com/careers"
+    },
+    {
+      "name": "Glamour",
+      "careerUrl": "https://www.condenast.com/careers"
+    },
+    {
+      "name": "Allure",
+      "careerUrl": "https://www.condenast.com/careers"
+    },
+    {
+      "name": "Self",
+      "careerUrl": "https://www.condenast.com/careers"
+    },
+    {
+      "name": "Bon Appétit",
+      "careerUrl": "https://www.condenast.com/careers"
+    },
+    {
+      "name": "Epicurious",
+      "careerUrl": "https://www.condenast.com/careers"
+    },
+    {
+      "name": "Architectural Digest",
+      "careerUrl": "https://www.condenast.com/careers"
+    }
+  ]
+}
