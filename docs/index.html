@@ -6,7 +6,22 @@
 </head>
 <body>
   <h1>NYC Companies</h1>
+  
+  <div class="controls">
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search companies...">
+    </div>
+    
+    <div class="filter-container">
+      <h3>Filter by Industry:</h3>
+      <div id="industry-filters" class="industry-filters">
+        <!-- Filters will be added dynamically -->
+      </div>
+    </div>
+  </div>
+  
   <div id="company-list"></div>
+  
   <script src="assets/js/app.js"></script>
 </body>
 </html>
