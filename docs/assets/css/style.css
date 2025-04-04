@@ -87,3 +87,9 @@ h1 {
   padding: 2rem;
   font-style: italic;
 }
+
+.industry-tag {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-left: 0.5rem;
+}
