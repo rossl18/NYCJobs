@@ -1,27 +1,21 @@
-// Load and display companies
-fetch('NYCJobs/docs/companies.json')
-  .then(response => response.json())
-  .then(data => {
-    const companies = data.companies;
-    const table = document.getElementById('company-list');
-    
-    // Fill table
-    companies.forEach(company => {
-      const row = table.insertRow();
-      row.innerHTML = `
-        <td>${company.name}</td>
-        <td><a href="${company.careerUrl}" target="_blank">View Jobs</a></td>
-      `;
-    });
-    
-    // Add search
-    document.getElementById('search').addEventListener('input', (e) => {
-      const term = e.target.value.toLowerCase();
-      const rows = table.querySelectorAll('tr');
+document.addEventListener('DOMContentLoaded', () => {
+  fetch('NYCJobs/docs/companies.json')
+    .then(response => response.json())
+    .then(data => {
+      const list = document.getElementById('company-list');
       
-      rows.forEach(row => {
-        const name = row.cells[0].textContent.toLowerCase();
-        row.style.display = name.includes(term) ? '' : 'none';
+      data.companies.forEach(company => {
+        const link = document.createElement('a');
+        link.href = company.careerUrl;
+        link.textContent = company.name;
+        link.className = 'company-link';
+        link.target = '_blank';
+        list.appendChild(link);
       });
+    })
+    .catch(error => {
+      console.error('Error loading data:', error);
+      document.getElementById('company-list').innerHTML = 
+        '<p>Error loading company data. Please try again later.</p>';
     });
-  });
+});
