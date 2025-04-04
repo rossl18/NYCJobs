@@ -1,5 +1,5 @@
 // Load and display companies
-fetch('companies.json')
+fetch('NYCJobs/docs/companies.json')
   .then(response => response.json())
   .then(data => {
     const companies = data.companies;
