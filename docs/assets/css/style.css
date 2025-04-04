@@ -1,6 +1,6 @@
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
   line-height: 1.6;
@@ -11,6 +11,57 @@ h1 {
   color: #2c3e50;
   text-align: center;
   margin-bottom: 2rem;
+}
+
+.controls {
+  margin-bottom: 2rem;
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.search-container {
+  margin-bottom: 1.5rem;
+}
+
+#search-input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.filter-container h3 {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  color: #2c3e50;
+}
+
+.industry-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.filter-checkbox {
+  display: none;
+}
+
+.filter-label {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #e9ecef;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.filter-checkbox:checked + .filter-label {
+  background: #0366d6;
+  color: white;
 }
 
 .company-link {
@@ -28,4 +79,11 @@ h1 {
 .company-link:hover {
   background: #e9ecef;
   transform: translateX(5px);
+}
+
+.no-results {
+  text-align: center;
+  color: #666;
+  padding: 2rem;
+  font-style: italic;
 }
