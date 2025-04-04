@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       'companies.json',         // Try 1: Same directory as HTML
       '../companies.json',      // Try 2: One level up
       'docs/companies.json',    // Try 3: Common GitHub Pages path
-      'nyc-companies-dashboard/docs/companies.json' // Try 4: Full path
+      'NYCJobs/docs/companies.json' // Try 4: Full path
     ];
 
     let data;
