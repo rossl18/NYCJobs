@@ -1,17 +1,20 @@
 document.addEventListener('DOMContentLoaded', async () => {
   const listElement = document.getElementById('company-list');
-  if (!listElement) {
-    showError('Error: Could not find #company-list element in HTML');
+  const searchInput = document.getElementById('search-input');
+  const filtersContainer = document.getElementById('industry-filters');
+  
+  if (!listElement || !searchInput || !filtersContainer) {
+    showError('Error: Could not find required elements in HTML');
     return;
   }
 
   try {
-    // Try BOTH possible JSON paths (GitHub Pages can be tricky)
+    // Try multiple possible JSON paths
     const jsonPaths = [
-      'companies.json',         // Try 1: Same directory as HTML
-      '../companies.json',      // Try 2: One level up
-      'docs/companies.json',    // Try 3: Common GitHub Pages path
-      'NYCJobs/docs/companies.json' // Try 4: Full path
+      'companies.json',
+      '../companies.json',
+      'docs/companies.json',
+      'NYCJobs/docs/companies.json'
     ];
 
     let data;
@@ -37,14 +40,58 @@ document.addEventListener('DOMContentLoaded', async () => {
       throw new Error(`All paths failed. Last error: ${lastError}`);
     }
 
-    // Render companies
-    listElement.innerHTML = data.companies.map(company => `
-      <a href="${company.careerUrl}" 
-         class="company-link" 
-         target="_blank">
-        ${company.name}
-      </a>
+    // Extract all unique industries
+    const industries = [...new Set(data.companies.map(company => company.industry))];
+    
+    // Create industry filter checkboxes
+    filtersContainer.innerHTML = industries.map(industry => `
+      <div class="filter-option">
+        <input type="checkbox" id="filter-${industry.replace(/\s+/g, '-').toLowerCase()}" 
+               class="filter-checkbox" value="${industry}" checked>
+        <label for="filter-${industry.replace(/\s+/g, '-').toLowerCase()}" 
+               class="filter-label">${industry}</label>
+      </div>
     `).join('');
+
+    // Store original data
+    let filteredCompanies = [...data.companies];
+
+    // Render companies based on current filters and search
+    const renderCompanies = () => {
+      const searchTerm = searchInput.value.toLowerCase();
+      const selectedIndustries = Array.from(
+        document.querySelectorAll('.filter-checkbox:checked')
+      ).map(checkbox => checkbox.value);
+
+      filteredCompanies = data.companies.filter(company => {
+        const matchesSearch = company.name.toLowerCase().includes(searchTerm) || 
+                            (company.industry && company.industry.toLowerCase().includes(searchTerm));
+        const matchesIndustry = selectedIndustries.length === 0 || 
+                              (company.industry && selectedIndustries.includes(company.industry));
+        return matchesSearch && matchesIndustry;
+      });
+
+      if (filteredCompanies.length === 0) {
+        listElement.innerHTML = '<div class="no-results">No companies match your filters</div>';
+      } else {
+        listElement.innerHTML = filteredCompanies.map(company => `
+          <a href="${company.careerUrl}" 
+             class="company-link" 
+             target="_blank">
+            ${company.name} <span class="industry-tag">(${company.industry})</span>
+          </a>
+        `).join('');
+      }
+    };
+
+    // Initial render
+    renderCompanies();
+
+    // Add event listeners for filtering
+    searchInput.addEventListener('input', renderCompanies);
+    document.querySelectorAll('.filter-checkbox').forEach(checkbox => {
+      checkbox.addEventListener('change', renderCompanies);
+    });
 
   } catch (error) {
     showError(`Failed to load companies: ${error.message}`, 
