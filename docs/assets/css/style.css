@@ -1,0 +1,19 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+#search {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.company {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+.company a {
+  color: #0366d6;
+  text-decoration: none;
+}
