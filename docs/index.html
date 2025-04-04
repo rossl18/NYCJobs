@@ -1,17 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NYC Companies Dashboard</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <title>NYC Companies</title>
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <div class="dashboard">
-    <h1>NYC Companies</h1>
-    <input type="text" id="search" placeholder="Search companies...">
-    <div id="company-list"></div>
-  </div>
-  <script src="assets/js/app.js"></script>
+  <h1>NYC Companies</h1>
+  
+  <!-- Simple Search Box -->
+  <input type="text" id="search" placeholder="Search companies...">
+  
+  <!-- Company Table -->
+  <table id="companies">
+    <thead>
+      <tr>
+        <th>Company</th>
+        <th>Careers Page</th>
+      </tr>
+    </thead>
+    <tbody id="company-list">
+      <!-- JS will fill this -->
+    </tbody>
+  </table>
+
+  <script src="assets/app.js"></script>
 </body>
 </html>
