@@ -1,95 +1,46 @@
-body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-  line-height: 1.6;
-  color: #333;
-}
-
-h1 {
-  color: #2c3e50;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.controls {
-  margin-bottom: 2rem;
-  background: #f8f9fa;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.search-container {
-  margin-bottom: 1.5rem;
-}
-
-#search-input {
-  width: 100%;
-  padding: 0.8rem;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  font-size: 1rem;
-}
-
-.filter-container h3 {
-  margin-top: 0;
-  margin-bottom: 0.8rem;
-  color: #2c3e50;
-}
-
-.industry-filters {
+.sort-buttons {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
+  gap: 0.5rem;
+  margin-top: 1rem;
 }
 
-.filter-checkbox {
-  display: none;
-}
-
-.filter-label {
-  display: inline-block;
+.sort-buttons button {
   padding: 0.5rem 1rem;
   background: #e9ecef;
-  border-radius: 20px;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
   transition: all 0.2s ease;
-  font-size: 0.9rem;
 }
 
-.filter-checkbox:checked + .filter-label {
+.sort-buttons button:hover {
+  background: #dee2e6;
+}
+
+.sort-buttons button.active {
   background: #0366d6;
   color: white;
 }
 
-.company-link {
-  display: block;
+.company-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   padding: 0.8rem;
   margin: 0.5rem 0;
   background: #f8f9fa;
   border-radius: 6px;
+}
+
+.company-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.company-link {
+  flex-grow: 1;
   text-decoration: none;
   color: #0366d6;
-  font-size: 1.1rem;
   transition: all 0.2s ease;
-}
-
-.company-link:hover {
-  background: #e9ecef;
-  transform: translateX(5px);
-}
-
-.no-results {
-  text-align: center;
-  color: #666;
-  padding: 2rem;
-  font-style: italic;
-}
-
-.industry-tag {
-  font-size: 0.8rem;
-  color: #6c757d;
-  margin-left: 0.5rem;
 }
