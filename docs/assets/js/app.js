@@ -34,6 +34,12 @@ function saveVisitedCompany(url) {
   }
 }
 
+function removeVisitedCompany(url) {
+  let visited = getVisitedCompanies();
+  visited = visited.filter(u => u !== url);
+  localStorage.setItem('visitedCompanies', JSON.stringify(visited));
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
   const listElement = document.getElementById('company-list');
   const searchInput = document.getElementById('search-input');
@@ -45,6 +51,56 @@ document.addEventListener('DOMContentLoaded', async () => {
     showError('Error: Could not find required elements in HTML');
     return;
   }
+
+  const renderCompanies = () => {
+    const searchTerm = searchInput.value.toLowerCase();
+    const selectedIndustries = Array.from(document.querySelectorAll('.industry-filter:checked')).map(cb => cb.value);
+    const visited = getVisitedCompanies();
+
+    let filtered = data.companies.filter(company => {
+      const matchesSearch = company.name.toLowerCase().includes(searchTerm) || 
+                             (company.industry && company.industry.toLowerCase().includes(searchTerm));
+      const matchesIndustry = selectedIndustries.includes(company.industry);
+      return matchesSearch && matchesIndustry;
+    });
+
+    const sortOrder = sortSelect.value;
+    filtered.sort((a, b) => {
+      return sortOrder === 'za'
+        ? b.name.localeCompare(a.name)
+        : a.name.localeCompare(b.name);
+    });
+
+    if (filtered.length === 0) {
+      listElement.innerHTML = '<div class="no-results">No companies match your search and filters</div>';
+    } else {
+      listElement.innerHTML = filtered.map(company => {
+        const isVisited = visited.includes(company.careerUrl);
+        return `
+          <div class="company-entry ${isVisited ? 'visited-company' : ''}">
+            <div>
+              <input type="checkbox" class="visited-checkbox" data-url="${company.careerUrl}" ${isVisited ? 'checked' : ''}>
+              <a href="${company.careerUrl}" class="company-link" target="_blank">
+                ${company.name} ${company.industry ? `<span class="industry-tag">(${company.industry})</span>` : ''}
+              </a>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      document.querySelectorAll('.visited-checkbox').forEach(checkbox => {
+        checkbox.addEventListener('change', (e) => {
+          const url = e.target.dataset.url;
+          if (e.target.checked) {
+            saveVisitedCompany(url);
+          } else {
+            removeVisitedCompany(url);
+          }
+          renderCompanies();
+        });
+      });
+    }
+  };
 
   try {
     const jsonPaths = [
@@ -94,53 +150,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 
     sortSelect.addEventListener('change', renderCompanies);
-
-    const renderCompanies = () => {
-      const searchTerm = searchInput.value.toLowerCase();
-      const selectedIndustries = Array.from(document.querySelectorAll('.industry-filter:checked')).map(cb => cb.value);
-      const visited = getVisitedCompanies();
-
-      let filtered = data.companies.filter(company => {
-        const matchesSearch = company.name.toLowerCase().includes(searchTerm) || 
-                               (company.industry && company.industry.toLowerCase().includes(searchTerm));
-        const matchesIndustry = selectedIndustries.includes(company.industry);
-        return matchesSearch && matchesIndustry;
-      });
-
-      const sortOrder = sortSelect.value;
-      filtered.sort((a, b) => {
-        return sortOrder === 'za'
-          ? b.name.localeCompare(a.name)
-          : a.name.localeCompare(b.name);
-      });
-
-      if (filtered.length === 0) {
-        listElement.innerHTML = '<div class="no-results">No companies match your search and filters</div>';
-      } else {
-        listElement.innerHTML = filtered.map(company => {
-          const isVisited = visited.includes(company.careerUrl);
-          return `
-            <div class="company-entry ${isVisited ? 'visited-company' : ''}">
-              <a href="${company.careerUrl}" class="company-link" target="_blank" data-url="${company.careerUrl}">
-                ${company.name} ${company.industry ? `<span class="industry-tag">(${company.industry})</span>` : ''}
-              </a>
-              <button class="mark-visited" data-url="${company.careerUrl}">Visited</button>
-            </div>
-          `;
-        }).join('');
-
-        document.querySelectorAll('.mark-visited').forEach(button => {
-          button.addEventListener('click', (e) => {
-            const url = e.target.dataset.url;
-            saveVisitedCompany(url);
-            renderCompanies();
-          });
-        });
-      }
-    };
+    searchInput.addEventListener('input', renderCompanies);
 
     renderCompanies();
-    searchInput.addEventListener('input', renderCompanies);
 
   } catch (error) {
     showError(`Failed to load companies: ${error.message}`, 'Check the browser console (F12) for details');
