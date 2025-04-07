@@ -90,19 +90,6 @@ h1 {
   color: white;
 }
 
-.company-link {
-  display: inline-block;
-  padding: 0.8rem 0;
-  text-decoration: none;
-  color: #0366d6;
-  font-size: 1.1rem;
-  transition: all 0.2s ease;
-}
-
-.company-link:hover {
-  text-decoration: underline;
-}
-
 .company-entry {
   display: flex;
   justify-content: space-between;
@@ -114,23 +101,30 @@ h1 {
   transition: all 0.2s ease;
 }
 
+.company-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #0366d6;
+  font-size: 1.1rem;
+  margin-left: 0.5rem; /* so the checkbox is separated from the text */
+  transition: all 0.2s ease;
+}
+
+.company-link:hover {
+  text-decoration: underline;
+}
+
+/* highlight visited companies in a subtle green */
 .company-entry.visited-company {
   background-color: #d4edda;
   border-left: 4px solid #28a745;
 }
 
-.mark-visited {
-  padding: 0.4rem 0.6rem;
-  font-size: 0.8rem;
-  border: none;
-  border-radius: 4px;
-  background-color: #28a745;
-  color: white;
+.visited-checkbox {
+  transform: scale(1.3);
   cursor: pointer;
-}
-
-.mark-visited:hover {
-  background-color: #218838;
+  margin-right: 0.5rem;
+  vertical-align: middle;
 }
 
 .no-results {
