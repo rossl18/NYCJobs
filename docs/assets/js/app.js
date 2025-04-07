@@ -40,28 +40,28 @@ function removeVisitedCompany(url) {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
-  // Grab DOM elements
   const listElement = document.getElementById('company-list');
   const searchInput = document.getElementById('search-input');
   const filtersContainer = document.getElementById('industry-filters');
   const sortSelect = document.getElementById('sort-select');
   const clearFiltersBtn = document.getElementById('clear-filters');
 
-  // Quick check to prevent null references
+  // Sanity check
   if (!listElement || !searchInput || !filtersContainer || !sortSelect || !clearFiltersBtn) {
     showError('Error: Could not find required elements in HTML');
     return;
   }
 
-  let data = null;
+  let data;
 
-  // Function that (re)renders the companies list
+  // The function that displays the companies (once data is loaded)
   const renderCompanies = () => {
-    if (!data || !data.companies) return; // If data is missing, do nothing
+    if (!data || !data.companies) return;
 
     const searchTerm = searchInput.value.toLowerCase();
-    const selectedIndustries = Array.from(document.querySelectorAll('.industry-filter:checked'))
-      .map(cb => cb.value);
+    const selectedIndustries = Array.from(
+      document.querySelectorAll('.industry-filter:checked')
+    ).map(cb => cb.value);
     const visited = getVisitedCompanies();
 
     // Filter
@@ -75,11 +75,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Sort
     const sortOrder = sortSelect.value; // 'az' or 'za'
     filtered.sort((a, b) => {
-      if (sortOrder === 'za') {
-        return b.name.localeCompare(a.name);
-      } else { 
-        return a.name.localeCompare(b.name);
-      }
+      return sortOrder === 'za'
+        ? b.name.localeCompare(a.name)
+        : a.name.localeCompare(b.name); // default 'az'
     });
 
     // Render
@@ -92,12 +90,12 @@ document.addEventListener('DOMContentLoaded', async () => {
           <div class="company-entry ${isVisited ? 'visited-company' : ''}">
             <div>
               <input 
-                type="checkbox" 
-                class="visited-checkbox" 
+                type="checkbox"
+                class="visited-checkbox"
                 data-url="${company.careerUrl}"
                 ${isVisited ? 'checked' : ''}>
-              <a href="${company.careerUrl}" 
-                 class="company-link" 
+              <a href="${company.careerUrl}"
+                 class="company-link"
                  target="_blank">
                 ${company.name}
                 ${company.industry ? `<span class="industry-tag">(${company.industry})</span>` : ''}
@@ -107,7 +105,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         `;
       }).join('');
 
-      // Hook up the visited checkboxes
+      // Hook up checkboxes
       document.querySelectorAll('.visited-checkbox').forEach(checkbox => {
         checkbox.addEventListener('change', e => {
           const url = e.target.dataset.url;
@@ -116,23 +114,52 @@ document.addEventListener('DOMContentLoaded', async () => {
           } else {
             removeVisitedCompany(url);
           }
-          // Re-render to show highlight
-          renderCompanies();
+          renderCompanies(); // refresh highlight
         });
       });
     }
   };
 
   try {
-    // Try only the local "companies.json" in the same folder as index.html
-    const response = await fetch('companies.json');
-    if (!response.ok) {
-      throw new Error(`HTTP error: ${response.status}`);
+    // We'll try multiple paths for 'companies.json'.
+    // The first that doesn't fail will be used.
+    const jsonPaths = [
+      'companies.json',
+      './companies.json',
+      '../companies.json',
+      'docs/companies.json',
+      './docs/companies.json',
+      'NYCJobs/docs/companies.json'
+    ];
+
+    let lastError;
+
+    for (const path of jsonPaths) {
+      try {
+        console.log(`Attempting to load data from "${path}" ...`);
+        const response = await fetch(path);
+        if (!response.ok) {
+          console.warn(`Response not OK (${response.status}): ${path}`);
+          lastError = `HTTP error! Status: ${response.status}`;
+          continue;
+        }
+        data = await response.json();
+        console.log(`Success! Loaded data from "${path}".`);
+        break; // we found a working path, exit the loop
+      } catch (err) {
+        console.warn(`Fetch attempt failed at "${path}": `, err.message);
+        lastError = err.message;
+      }
     }
-    data = await response.json();
+
+    // If data is still null or undefined, all paths failed
+    if (!data) {
+      throw new Error(`All paths failed. Last error: ${lastError}`);
+    }
+
+    // Remove duplicates (if any) and build industry filters
     data.companies = removeDuplicates(data.companies);
 
-    // Build the industry checkboxes
     const industries = [...new Set(
       data.companies.map(c => c.industry).filter(Boolean)
     )].sort();
@@ -141,17 +168,19 @@ document.addEventListener('DOMContentLoaded', async () => {
       const idVal = industry.toLowerCase().replace(/\s+/g, '-');
       return `
         <div class="filter-option">
-          <input type="checkbox"
-                 id="filter-${idVal}"
-                 class="filter-checkbox industry-filter"
-                 value="${industry}"
-                 checked>
+          <input
+            type="checkbox"
+            id="filter-${idVal}"
+            class="filter-checkbox industry-filter"
+            value="${industry}"
+            checked
+          >
           <label for="filter-${idVal}" class="filter-label">${industry}</label>
         </div>
       `;
     }).join('');
 
-    // Clear filters => re-check every box => re-render
+    // Clear filters => re-check every filter => re-render
     clearFiltersBtn.addEventListener('click', () => {
       document.querySelectorAll('.industry-filter').forEach(cb => {
         cb.checked = true;
@@ -159,22 +188,22 @@ document.addEventListener('DOMContentLoaded', async () => {
       renderCompanies();
     });
 
-    // Listen for any filter changes
+    // On filter changes
     document.querySelectorAll('.industry-filter').forEach(cb => {
       cb.addEventListener('change', renderCompanies);
     });
 
-    // Sorting
+    // On sort changes
     sortSelect.addEventListener('change', renderCompanies);
 
-    // Search box
+    // On search changes
     searchInput.addEventListener('input', renderCompanies);
 
     // Initial render
     renderCompanies();
 
   } catch (err) {
-    showError(`Failed to load companies.json: ${err.message}`, 'Check the browser console for details');
+    showError(`Failed to load companies.json: ${err.message}`, 'Check the browser console (F12) for details');
     console.error('Debug info:', err);
   }
 });
