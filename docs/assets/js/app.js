@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   try {
     // Try only the local "companies.json" in the same folder as index.html
-    const response = await fetch('docs/companies.json');
+    const response = await fetch('companies.json');
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
     }
