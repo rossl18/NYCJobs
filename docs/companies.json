@@ -673,6 +673,752 @@
     {"name": "Axios ", "careerUrl": "https://www.axios.com/careers", "industry": "Media"},
     {"name": "The Markup", "careerUrl": "https://themarkup.org/jobs", "industry": "Media"},
     {"name": "The City", "careerUrl": "https://www.thecity./jobs", "industry": "Media"},
-    {"name": "Documented NY", "careerUrl": "https://documentedny.com/jobs", "industry": "Media"}
+    {"name": "Documented NY", "careerUrl": "https://documentedny.com/jobs", "industry": "Media"},
+  {
+    "name": "Square",
+    "careerUrl": "https://squareup.com/us/en/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "Zoom",
+    "careerUrl": "https://zoom.us/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "Okta",
+    "careerUrl": "https://www.okta.com/company/careers/",
+    "industry": "Technology"
+  },
+  {
+    "name": "DocuSign",
+    "careerUrl": "https://www.docusign.com/company/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "Cloudflare",
+    "careerUrl": "https://www.cloudflare.com/careers/",
+    "industry": "Technology"
+  },
+  {
+    "name": "Atlassian",
+    "careerUrl": "https://www.atlassian.com/company/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "Box",
+    "careerUrl": "https://www.box.com/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "Dropbox",
+    "careerUrl": "https://www.dropbox.com/jobs",
+    "industry": "Technology"
+  },
+  {
+    "name": "Adobe",
+    "careerUrl": "https://www.adobe.com/careers.html",
+    "industry": "Technology"
+  },
+  {
+    "name": "Pinterest",
+    "careerUrl": "https://www.pinterestcareers.com",
+    "industry": "Technology"
+  },
+  {
+    "name": "Snap Inc.",
+    "careerUrl": "https://www.snap.com/en-US/jobs",
+    "industry": "Technology"
+  },
+  {
+    "name": "TikTok",
+    "careerUrl": "https://careers.tiktok.com",
+    "industry": "Technology"
+  },
+  {
+    "name": "ByteDance",
+    "careerUrl": "https://jobs.bytedance.com/",
+    "industry": "Technology"
+  },
+  {
+    "name": "DoorDash",
+    "careerUrl": "https://careers.doordash.com",
+    "industry": "Technology"
+  },
+  {
+    "name": "Instacart",
+    "careerUrl": "https://careers.instacart.com",
+    "industry": "Technology"
+  },
+  {
+    "name": "Weebly",
+    "careerUrl": "https://www.weebly.com/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "Getty Images",
+    "careerUrl": "https://www.gettyimages.com/company/careers",
+    "industry": "Media"
+  },
+  {
+    "name": "Marvel Entertainment",
+    "careerUrl": "https://www.marvel.com/careers",
+    "industry": "Entertainment"
+  },
+  {
+    "name": "DC Comics",
+    "careerUrl": "https://www.dc.com/careers",
+    "industry": "Entertainment"
+  },
+  {
+    "name": "Take-Two Interactive",
+    "careerUrl": "https://careers.take2games.com",
+    "industry": "Entertainment"
+  },
+  {
+    "name": "Rockstar Games",
+    "careerUrl": "https://www.rockstargames.com/careers",
+    "industry": "Entertainment"
+  },
+  {
+    "name": "Zynga",
+    "careerUrl": "https://www.zynga.com/careers/",
+    "industry": "Entertainment"
+  },
+  {
+    "name": "Activision Blizzard",
+    "careerUrl": "https://careers.activisionblizzard.com/",
+    "industry": "Entertainment"
+  },
+  {
+    "name": "ASAPP",
+    "careerUrl": "https://www.asapp.com/careers/",
+    "industry": "Technology"
+  },
+  {
+    "name": "Cedar",
+    "careerUrl": "https://www.cedar.com/careers/",
+    "industry": "Healthcare"
+  },
+  {
+    "name": "Flavorpill",
+    "careerUrl": "https://www.flavorpill.com/jobs",
+    "industry": "Media"
+  },
+  {
+    "name": "Dataminr",
+    "careerUrl": "https://www.dataminr.com/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "Springboard",
+    "careerUrl": "https://www.springboard.com/about/careers/",
+    "industry": "Education"
+  },
+  {
+    "name": "Codecademy",
+    "careerUrl": "https://www.codecademy.com/about/careers",
+    "industry": "Education"
+  },
+  {
+    "name": "CK-12 Foundation",
+    "careerUrl": "https://www.ck12.org/about/jobs/",
+    "industry": "Education"
+  },
+  {
+    "name": "Digital Reasoning",
+    "careerUrl": "https://digitalreasoning.com/company/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "Sisense",
+    "careerUrl": "https://www.sisense.com/careers/",
+    "industry": "Technology"
+  },
+  {
+    "name": "Yotpo",
+    "careerUrl": "https://www.yotpo.com/careers/",
+    "industry": "Technology"
+  },
+  {
+    "name": "Persado",
+    "careerUrl": "https://www.persado.com/careers/",
+    "industry": "Technology"
+  },
+  {
+    "name": "PolicyGenius",
+    "careerUrl": "https://www.policygenius.com/careers/",
+    "industry": "Financial Services"
+  },
+  {
+    "name": "Bowery Farming",
+    "careerUrl": "https://boweryfarming.com/jobs/",
+    "industry": "Food & Agriculture"
+  },
+  {
+    "name": "MediaMath",
+    "careerUrl": "https://www.mediamath.com/careers/",
+    "industry": "Technology"
+  },
+  {
+    "name": "Integral Ad Science",
+    "careerUrl": "https://integralads.com/careers/",
+    "industry": "Technology"
+  },
+  {
+    "name": "Index Exchange",
+    "careerUrl": "https://www.indexexchange.com/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "Outbrain",
+    "careerUrl": "https://www.outbrain.com/careers/",
+    "industry": "Technology"
+  },
+  {
+    "name": "Taboola",
+    "careerUrl": "https://www.taboola.com/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "CafeMedia",
+    "careerUrl": "https://www.cafemedia.com/careers/",
+    "industry": "Media"
+  },
+  {
+    "name": "iHeartMedia",
+    "careerUrl": "https://www.iheartmedia.com/careers",
+    "industry": "Media"
+  },
+  {
+    "name": "Fox Corporation",
+    "careerUrl": "https://www.foxcorporation.com/careers/",
+    "industry": "Entertainment"
+  },
+  {
+    "name": "Comcast",
+    "careerUrl": "https://jobs.comcast.com/",
+    "industry": "Entertainment"
+  },
+  {
+    "name": "Charter Communications",
+    "careerUrl": "https://jobs.spectrum.com/",
+    "industry": "Technology"
+  },
+  {
+    "name": "Verizon",
+    "careerUrl": "https://www.verizon.com/about/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "AT&T",
+    "careerUrl": "https://www.att.jobs/",
+    "industry": "Technology"
+  },
+  {
+    "name": "T-Mobile",
+    "careerUrl": "https://www.t-mobile.com/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "Via",
+    "careerUrl": "https://ridewithvia.com/join-our-team/",
+    "industry": "Transportation"
+  },
+  {
+    "name": "Foursquare",
+    "careerUrl": "https://foursquare.com/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "Vimeo",
+    "careerUrl": "https://vimeo.com/jobs",
+    "industry": "Technology"
+  },
+  {
+    "name": "Quip",
+    "careerUrl": "https://www.getquip.com/careers",
+    "industry": "Retail"
+  },
+  {
+    "name": "Away",
+    "careerUrl": "https://www.awaytravel.com/jobs",
+    "industry": "Retail"
+  },
+  {
+    "name": "Blink Health",
+    "careerUrl": "https://www.blinkhealth.com/careers",
+    "industry": "Healthcare"
+  },
+  {
+    "name": "DailyPay",
+    "careerUrl": "https://www.dailypay.com/careers",
+    "industry": "Financial Services"
+  },
+  {
+    "name": "Cityblock Health",
+    "careerUrl": "https://www.cityblock.com/careers",
+    "industry": "Healthcare"
+  },
+  {
+    "name": "Common",
+    "careerUrl": "https://www.common.com/careers",
+    "industry": "Financial Services"
+  },
+  {
+    "name": "Paperless Post",
+    "careerUrl": "https://www.paperlesspost.com/jobs",
+    "industry": "Technology"
+  },
+  {
+    "name": "Splice",
+    "careerUrl": "https://splice.com/jobs",
+    "industry": "Entertainment"
+  },
+  {
+    "name": "Smartling",
+    "careerUrl": "https://www.smartling.com/about/careers/",
+    "industry": "Technology"
+  },
+  {
+    "name": "TransPerfect",
+    "careerUrl": "https://www.transperfect.com/about/careers",
+    "industry": "Professional Services"
+  },
+  {
+    "name": "Daily Harvest",
+    "careerUrl": "https://www.daily-harvest.com/careers",
+    "industry": "Retail"
+  },
+  {
+    "name": "Skillshare",
+    "careerUrl": "https://www.skillshare.com/jobs",
+    "industry": "Education"
+  },
+  {
+    "name": "Jackpocket",
+    "careerUrl": "https://jackpocket.com/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "Teachable",
+    "careerUrl": "https://teachable.com/careers",
+    "industry": "Education"
+  },
+  {
+    "name": "Aetion",
+    "careerUrl": "https://aetion.com/careers",
+    "industry": "Healthcare"
+  },
+  {
+    "name": "Riskified",
+    "careerUrl": "https://www.riskified.com/careers/",
+    "industry": "Technology"
+  },
+  {
+    "name": "Monday.com",
+    "careerUrl": "https://monday.com/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "Check",
+    "careerUrl": "https://www.checkhq.com/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "Carta",
+    "careerUrl": "https://carta.com/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "Chainlink",
+    "careerUrl": "https://chain.link/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "Stash",
+    "careerUrl": "https://www.stash.com/careers/",
+    "industry": "Financial Services"
+  },
+  {
+    "name": "Papaya Global",
+    "careerUrl": "https://www.papayaglobal.com/careers/",
+    "industry": "Technology"
+  },
+  {
+    "name": "Manhattan Robotics",
+    "careerUrl": "https://www.manhattanrobotics.com/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "Genesis Global",
+    "careerUrl": "https://www.genesis.global/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "Union Square Ventures",
+    "careerUrl": "https://www.usv.com/careers",
+    "industry": "Financial Services"
+  },
+  {
+    "name": "Scout Ventures",
+    "careerUrl": "https://scoutventures.com",
+    "industry": "Financial Services"
+  },
+  {
+    "name": "Estée Lauder",
+    "careerUrl": "https://www.elcompanies.com/en/careers",
+    "industry": "Retail"
+  },
+  {
+    "name": "Avon",
+    "careerUrl": "https://www.avonworldwide.com/careers",
+    "industry": "Retail"
+  },
+  {
+    "name": "American Kennel Club",
+    "careerUrl": "https://www.akc.org/about/jobs/",
+    "industry": "Non-Profit"
+  },
+  {
+    "name": "Amper Music",
+    "careerUrl": "https://ampermusic.com/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "Heard City",
+    "careerUrl": "http://heardcity.com/jobs/",
+    "industry": "Entertainment"
+  },
+  {
+    "name": "Knot Standard",
+    "careerUrl": "https://www.knotstandard.com/careers/",
+    "industry": "Retail"
+  },
+  {
+    "name": "Brooklinen",
+    "careerUrl": "https://www.brooklinen.com/pages/careers",
+    "industry": "Retail"
+  },
+  {
+    "name": "Dagne Dover",
+    "careerUrl": "https://dagnedover.com/pages/careers",
+    "industry": "Retail"
+  },
+  {
+    "name": "Gorillas",
+    "careerUrl": "https://gorillas.io/en/careers",
+    "industry": "Retail"
+  },
+  {
+    "name": "Klarna",
+    "careerUrl": "https://www.klarna.com/us/careers/",
+    "industry": "Financial Services"
+  },
+  {
+    "name": "JetBlue",
+    "careerUrl": "https://careers.jetblue.com",
+    "industry": "Travel"
+  },
+  {
+    "name": "Coty",
+    "careerUrl": "https://www.coty.com/join-us",
+    "industry": "Retail"
+  },
+  {
+    "name": "IAC",
+    "careerUrl": "https://www.iac.com/careers",
+    "industry": "Media"
+  },
+  {
+    "name": "Match Group",
+    "careerUrl": "https://mtch.com/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "Angi",
+    "careerUrl": "https://www.angi.com/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "Fidelis Care",
+    "careerUrl": "https://www.fideliscare.org/About/Careers",
+    "industry": "Healthcare"
+  },
+  {
+    "name": "Unqork",
+    "careerUrl": "https://www.unqork.com/company/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "StockTwits",
+    "careerUrl": "https://about.stocktwits.com/careers/",
+    "industry": "Financial Services"
+  },
+  {
+    "name": "Hinge",
+    "careerUrl": "https://hinge.co/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "OkCupid",
+    "careerUrl": "https://www.okcupid.com/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "Meetup",
+    "careerUrl": "https://www.meetup.com/careers/",
+    "industry": "Technology"
+  },
+  {
+    "name": "Sesame",
+    "careerUrl": "https://sesamecare.com/jobs",
+    "industry": "Healthcare"
+  },
+  {
+    "name": "Medly",
+    "careerUrl": "https://medly.com/careers",
+    "industry": "Healthcare"
+  },
+  {
+    "name": "Overtime",
+    "careerUrl": "https://www.overtime.tv/pages/careers",
+    "industry": "Media"
+  },
+  {
+    "name": "ActionIQ",
+    "careerUrl": "https://www.actioniq.com/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "Reorg",
+    "careerUrl": "https://reorg.com/careers/",
+    "industry": "Financial Services"
+  },
+  {
+    "name": "Axoni",
+    "careerUrl": "https://axoni.com/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "ChartHop",
+    "careerUrl": "https://www.charthop.com/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "Axsome Therapeutics",
+    "careerUrl": "https://axsome.com/careers/",
+    "industry": "Healthcare"
+  },
+  {
+    "name": "Prose",
+    "careerUrl": "https://prose.com/careers",
+    "industry": "Retail"
+  },
+  {
+    "name": "Stadium Goods",
+    "careerUrl": "https://www.stadiumgoods.com/careers",
+    "industry": "Retail"
+  },
+  {
+    "name": "Magic Spoon",
+    "careerUrl": "https://magicspoon.com/pages/careers",
+    "industry": "Retail"
+  },
+  {
+    "name": "Giphy",
+    "careerUrl": "https://giphy.com/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "VTS",
+    "careerUrl": "https://www.vts.com/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "WorkFusion",
+    "careerUrl": "https://www.workfusion.com/careers/",
+    "industry": "Technology"
+  },
+  {
+    "name": "UiPath",
+    "careerUrl": "https://www.uipath.com/company/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "The Ladders",
+    "careerUrl": "https://www.theladders.com/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "InVision",
+    "careerUrl": "https://www.invisionapp.com/company#jobs",
+    "industry": "Technology"
+  },
+  {
+    "name": "SeatGeek",
+    "careerUrl": "https://seatgeek.com/jobs",
+    "industry": "Technology"
+  },
+  {
+    "name": "FanDuel",
+    "careerUrl": "https://www.fanduel.com/careers",
+    "industry": "Entertainment"
+  },
+  {
+    "name": "DraftKings",
+    "careerUrl": "https://careers.draftkings.com",
+    "industry": "Entertainment"
+  },
+  {
+    "name": "SoHo House",
+    "careerUrl": "https://careers.sohohouse.com",
+    "industry": "Retail"
+  },
+  {
+    "name": "Foot Locker",
+    "careerUrl": "https://careers.footlocker.com",
+    "industry": "Retail"
+  },
+  {
+    "name": "Barstool Sports",
+    "careerUrl": "https://www.barstoolsports.com/careers",
+    "industry": "Media"
+  },
+  {
+    "name": "Morning Brew",
+    "careerUrl": "https://www.morningbrew.com/careers",
+    "industry": "Media"
+  },
+  {
+    "name": "Gimlet",
+    "careerUrl": "https://www.gimletmedia.com/careers",
+    "industry": "Media"
+  },
+  {
+    "name": "Freelancers Union",
+    "careerUrl": "https://www.freelancersunion.org/about/careers",
+    "industry": "Non-Profit"
+  },
+  {
+    "name": "MakerBot",
+    "careerUrl": "https://www.makerbot.com/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "Kickstarter",
+    "careerUrl": "https://www.kickstarter.com/jobs",
+    "industry": "Technology"
+  },
+  {
+    "name": "Eater",
+    "careerUrl": "https://www.eater.com/pages/careers",
+    "industry": "Media"
+  },
+  {
+    "name": "The Players' Tribune",
+    "careerUrl": "https://www.theplayerstribune.com/careers",
+    "industry": "Media"
+  },
+  {
+    "name": "BioBus",
+    "careerUrl": "https://www.biobus.org/jobs",
+    "industry": "Education"
+  },
+  {
+    "name": "CLEAR",
+    "careerUrl": "https://www.clearme.com/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "Mark43",
+    "careerUrl": "https://www.mark43.com/careers/",
+    "industry": "Technology"
+  },
+  {
+    "name": "Hyperscience",
+    "careerUrl": "https://www.hyperscience.com/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "Artsy",
+    "careerUrl": "https://www.artsy.net/jobs",
+    "industry": "Media"
+  },
+  {
+    "name": "Razorfish",
+    "careerUrl": "https://www.razorfish.com/careers",
+    "industry": "Professional Services"
+  },
+  {
+    "name": "Virtu Financial",
+    "careerUrl": "https://www.virtu.com/careers",
+    "industry": "Financial Services"
+  },
+  {
+    "name": "Eight Sleep",
+    "careerUrl": "https://www.eightsleep.com/careers/",
+    "industry": "Retail"
+  },
+  {
+    "name": "Universe",
+    "careerUrl": "https://www.withuniverse.com/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "Betterment",
+    "careerUrl": "https://www.betterment.com/careers",
+    "industry": "Financial Services"
+  },
+  {
+    "name": "Alloy",
+    "careerUrl": "https://www.alloy.co/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "Bizzabo",
+    "careerUrl": "https://www.bizzabo.com/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "Rightway Healthcare",
+    "careerUrl": "https://www.rightwayhealthcare.com/careers",
+    "industry": "Healthcare"
+  },
+  {
+    "name": "Healthfirst",
+    "careerUrl": "https://www.healthfirst.org/careers",
+    "industry": "Healthcare"
+  },
+  {
+    "name": "Rokt",
+    "careerUrl": "https://rokt.com/careers/",
+    "industry": "Technology"
+  },
+  {
+    "name": "Ocrolus",
+    "careerUrl": "https://www.ocrolus.com/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "LeafLink",
+    "careerUrl": "https://leaflink.com/careers",
+    "industry": "Technology"
+  },
+  {
+    "name": "Kasisto",
+    "careerUrl": "https://kasisto.com/careers/",
+    "industry": "Technology"
+  },
+  {
+    "name": "Even Financial",
+    "careerUrl": "https://evenfinancial.com/careers",
+    "industry": "Financial Services"
+  },
+  {
+    "name": "Block Renovation",
+    "careerUrl": "https://www.blockrenovation.com/careers",
+    "industry": "Financial Services"
+  }
+
   ]
 }
