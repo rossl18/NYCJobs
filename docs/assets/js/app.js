@@ -24,7 +24,27 @@ function showError(title, details = '') {
   document.body.insertAdjacentHTML('afterbegin', errorHtml);
 }
 
+// We'll store the 'visited' state in this object, keyed by "companyKey"
+let visitedCompanies = {};
+
+function getCompanyKey(company) {
+  // Create a unique key for each company, based on name + URL
+  return (
+    company.name.toLowerCase().replace(/\s+/g, '_') +
+    '|' +
+    (company.careerUrl.toLowerCase().replace(/\s+/g, '_') || '')
+  );
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
+  // Load previously visited companies from localStorage, if present
+  const storedVisited = localStorage.getItem('visitedCompanies');
+  if (storedVisited) {
+    visitedCompanies = JSON.parse(storedVisited);
+  } else {
+    visitedCompanies = {};
+  }
+
   const listElement = document.getElementById('company-list');
   const searchInput = document.getElementById('search-input');
   const filtersContainer = document.getElementById('industry-filters');
@@ -131,11 +151,33 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (filtered.length === 0) {
         listElement.innerHTML = '<div class="no-results">No companies match your search and filters</div>';
       } else {
-        listElement.innerHTML = filtered.map(company => `
-          <a href="${company.careerUrl}" class="company-link" target="_blank">
-            ${company.name} ${company.industry ? `<span class="industry-tag">(${company.industry})</span>` : ''}
-          </a>
-        `).join('');
+        // Build the HTML with an added checkbox for "visited"
+        listElement.innerHTML = filtered.map(company => {
+          const cKey = getCompanyKey(company);
+          const isChecked = visitedCompanies[cKey] ? 'checked' : '';
+          
+          return `
+            <div class="company-item">
+              <input 
+                type="checkbox" 
+                class="visited-checkbox" 
+                data-company-key="${cKey}"
+                ${isChecked}
+              />
+              <a href="${company.careerUrl}" class="company-link" target="_blank">
+                ${company.name} ${company.industry ? `<span class="industry-tag">(${company.industry})</span>` : ''}
+              </a>
+            </div>
+          `;
+        }).join('');
+
+        // Attach change event for each checkbox to store in localStorage
+        document.querySelectorAll('.visited-checkbox').forEach(checkbox => {
+          checkbox.addEventListener('change', function() {
+            visitedCompanies[this.dataset.companyKey] = this.checked;
+            localStorage.setItem('visitedCompanies', JSON.stringify(visitedCompanies));
+          });
+        });
       }
     };
 
@@ -151,7 +193,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     console.error('Debug info:', {
       error, 
       windowLocation: window.location.href,
-      pathsTried: jsonPaths
+      jsonPathsTried: jsonPaths
     });
   }
 });
+

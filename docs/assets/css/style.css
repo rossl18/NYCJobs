@@ -13,6 +13,7 @@ h1 {
   margin-bottom: 2rem;
 }
 
+/* Container for filters and search */
 .controls {
   margin-bottom: 2rem;
   background: #f8f9fa;
@@ -21,10 +22,10 @@ h1 {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+/* Search container styling */
 .search-container {
   margin-bottom: 1.5rem;
 }
-
 #search-input {
   width: 100%;
   padding: 0.8rem;
@@ -33,22 +34,24 @@ h1 {
   font-size: 1rem;
 }
 
+/* Filter container styling */
 .filter-container h3 {
   margin-top: 0;
   margin-bottom: 0.8rem;
   color: #2c3e50;
 }
-
 .industry-filters {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
 }
 
+/* Hide the default checkboxes for filters, because you style them via labels */
 .filter-checkbox {
   display: none;
 }
 
+/* Label styling for filter checkboxes */
 .filter-label {
   display: inline-block;
   padding: 0.5rem 1rem;
@@ -59,11 +62,21 @@ h1 {
   font-size: 0.9rem;
 }
 
+/* Change label background/color when the filter checkbox is checked */
 .filter-checkbox:checked + .filter-label {
   background: #0366d6;
   color: white;
 }
 
+/* For the "no results" message */
+.no-results {
+  text-align: center;
+  color: #666;
+  padding: 2rem;
+  font-style: italic;
+}
+
+/* Original company link styling */
 .company-link {
   display: block;
   padding: 0.8rem;
@@ -75,21 +88,27 @@ h1 {
   font-size: 1.1rem;
   transition: all 0.2s ease;
 }
-
 .company-link:hover {
   background: #e9ecef;
   transform: translateX(5px);
 }
-
-.no-results {
-  text-align: center;
-  color: #666;
-  padding: 2rem;
-  font-style: italic;
-}
-
 .industry-tag {
   font-size: 0.8rem;
   color: #6c757d;
   margin-left: 0.5rem;
 }
+
+/* NEW: Container for each checkbox + link pair */
+.company-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+/* NEW: Style for the visited checkbox so it’s visible and clickable */
+.visited-checkbox {
+  margin-right: 0.5rem;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
